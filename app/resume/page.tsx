@@ -61,22 +61,27 @@ const projects = [
   {
     name: 'IkiminaPass',
     role: 'Backend & Project Lead',
-    description: 'ROSCA Platform for Rwanda – Architected a full backend system in NestJS and PostgreSQL to digitise Rwanda\'s community savings groups (Ibimina)',
+    description: 'ROSCA Platform for Rwanda – Architected and led the full backend of IkiminaPass, a fintech platform digitising Rwanda\'s community savings groups (Ibimina). Built on NestJS, TypeScript, and PostgreSQL with Prisma ORM.',
+  },
+  {
+    name: 'MamaCare',
+    role: 'Backend Developer & Project Lead',
+    description: 'Maternal Health Platform – Built a backend system to support maternal health tracking and care coordination for expectant mothers in Rwanda with RESTful APIs and FCM notifications.',
   },
   {
     name: 'TheYouthContest',
-    role: 'Full Stack',
-    description: 'Platform for debate organization – Designed and built the full-stack infrastructure digitalizing debate championship processes',
+    role: 'Full-Stack Developer',
+    description: 'Debate Championship Platform – Designed and built the full-stack infrastructure digitalising debate championship operations with RBAC and Node.js backend.',
   },
   {
     name: 'Job Portal',
     role: 'Backend & Project Lead',
-    description: 'Full Stack Recruitment Platform – Led full development lifecycle architecture, task distribution, version control, testing, and deployment',
+    description: 'Full Stack Recruitment Platform – Led the full development lifecycle of a recruitment platform connecting employers and job seekers with MongoDB and JWT authentication.',
   },
   {
     name: 'BDifferent',
-    role: 'Full Stack',
-    description: 'E-commerce platform – Built backend CRUD APIs in Node.js and Express for product, user and category management with image upload support',
+    role: 'Full-Stack Developer',
+    description: 'E-commerce platform – Built a full-stack e-commerce platform with Node.js and Express backend supporting product, user, and category management with image upload.',
   },
 ]
 
@@ -90,6 +95,15 @@ const skills = {
 
 const certifications = [
   'KLab Training Compilation Certificate',
+]
+
+const awards = [
+  'KLab Hackathon Winner - MamaCare Project',
+]
+
+const extracurricular = [
+  'KLab Incubation Program - Full Stack Development',
+  'Open Source Contributions on GitHub',
 ]
 
 const interests = [
@@ -107,12 +121,20 @@ export default function ResumePage() {
       
       <section className="pt-32 pb-16 px-6 md:px-12 max-w-4xl mx-auto">
         <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">Professional snapshot</p>
-        <div className="flex items-center justify-between mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">Resume</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-2">Tresor Mugisha</h1>
+        <p className="text-xl text-gray-600 mb-4">Software Engineer · Backend Developer</p>
+        <div className="flex gap-4 mb-8">
+          <a href="https://linkedin.com/in/tresormuhereza" target="_blank" rel="noopener noreferrer" className="text-sm text-accent hover:underline">LinkedIn</a>
+          <a href="https://github.com/tresormu" target="_blank" rel="noopener noreferrer" className="text-sm text-accent hover:underline">GitHub</a>
+        </div>
+
+        <div className="mb-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-2">Download Resume</h2>
+          <p className="text-gray-600 mb-4">Get a PDF copy of my complete resume</p>
           <a 
             href="/resume.pdf" 
             download 
-            className="px-4 py-2 border border-gray-300 text-gray-700 text-sm font-medium rounded hover:border-gray-400 transition"
+            className="inline-block px-4 py-2 bg-accent text-white text-sm font-medium rounded hover:bg-accent-dark transition"
           >
             Download PDF
           </a>
@@ -224,6 +246,16 @@ export default function ResumePage() {
           </ul>
         </div>
 
+        {/* Awards & Achievements */}
+        <div className="mb-12">
+          <h2 className="text-xl font-bold text-gray-900 mb-4 border-b border-gray-200 pb-2">Awards & Achievements</h2>
+          <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
+            {awards.map((award, index) => (
+              <li key={index}>{award}</li>
+            ))}
+          </ul>
+        </div>
+
         {/* Languages */}
         <div className="mb-12">
           <h2 className="text-xl font-bold text-gray-900 mb-4 border-b border-gray-200 pb-2">Languages</h2>
@@ -231,6 +263,16 @@ export default function ResumePage() {
             <li>English (Professional)</li>
             <li>Kinyarwanda (Native)</li>
             <li>French (Basic)</li>
+          </ul>
+        </div>
+
+        {/* Extracurricular Activities and Volunteering */}
+        <div className="mb-12">
+          <h2 className="text-xl font-bold text-gray-900 mb-4 border-b border-gray-200 pb-2">Extracurricular Activities and Volunteering</h2>
+          <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
+            {extracurricular.map((activity, index) => (
+              <li key={index}>{activity}</li>
+            ))}
           </ul>
         </div>
 
