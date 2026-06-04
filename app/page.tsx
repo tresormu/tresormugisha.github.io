@@ -19,81 +19,77 @@ export default function HomePage() {
           Portfolio · Backend Development & Full Stack Engineering
         </p>
         
-        <div className="grid md:grid-cols-[1fr_auto] gap-12 items-start">
-          <div>
-            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 tracking-tight mb-4">
-              Tresor Mugisha
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-600 mb-2">
-              Software Engineer · Backend Developer
-            </p>
-            
-            <p className="text-lg text-gray-500 max-w-2xl mb-8">
-              Building reliable systems, writing maintainable code, and creating production-grade SaaS products with focus on backend architecture and full-stack development.
-            </p>
+        <div className="text-center mb-12">
+          {/* Profile Photo - Circular and moved down */}
+          <div className="relative w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white shadow-lg">
+            <Image
+              src="/profile.jpg"
+              alt="Tresor Mugisha"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 tracking-tight mb-4">
+            Tresor Mugisha
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-gray-600 mb-2">
+            Software Engineer · Backend Developer
+          </p>
+          
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-8">
+            Building reliable systems, writing maintainable code, and creating production-grade SaaS products with focus on backend architecture and full-stack development.
+          </p>
 
-            {/* Now / Next */}
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div>
-                <h3 className="text-sm font-semibold text-gray-900 mb-3">Now</h3>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Building production-grade backend systems with NestJS and Node.js</li>
-                  <li>• Developing RESTful APIs with JWT authentication and middleware</li>
-                  <li>• Leading full-stack projects from architecture to deployment</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-sm font-semibold text-gray-900 mb-3">Next</h3>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Expanding expertise in distributed systems and microservices</li>
-                  <li>• Contributing to open-source backend tooling projects</li>
-                  <li>• Publishing technical articles on backend architecture patterns</li>
-                </ul>
-              </div>
+          {/* Now / Next */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mb-12 text-left">
+            <div>
+              <h3 className="text-sm font-semibold text-gray-900 mb-3">Now</h3>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Building production-grade backend systems with NestJS and Node.js</li>
+                <li>• Developing RESTful APIs with JWT authentication and middleware</li>
+                <li>• Leading full-stack projects from architecture to deployment</li>
+              </ul>
             </div>
-
-            {/* Stats */}
-            <div className="flex gap-8 mb-12">
-              <div>
-                <div className="text-3xl font-bold text-gray-900">4+</div>
-                <div className="text-xs text-gray-500 uppercase tracking-wider">Projects</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-gray-900">3</div>
-                <div className="text-xs text-gray-500 uppercase tracking-wider">Companies</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-gray-900">2+</div>
-                <div className="text-xs text-gray-500 uppercase tracking-wider">Years Exp</div>
-              </div>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex gap-4 mb-16">
-              <Link href="/projects" className="px-6 py-3 bg-accent text-white text-sm font-medium rounded hover:bg-accent-dark transition">
-                Explore Projects
-              </Link>
-              <Link href="/resume" className="px-6 py-3 border border-gray-300 text-gray-700 text-sm font-medium rounded hover:border-gray-400 transition">
-                Resume
-              </Link>
-              <Link href="/contact" className="px-6 py-3 border border-gray-300 text-gray-700 text-sm font-medium rounded hover:border-gray-400 transition">
-                Connect
-              </Link>
+            <div>
+              <h3 className="text-sm font-semibold text-gray-900 mb-3">Next</h3>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Expanding expertise in distributed systems and microservices</li>
+                <li>• Contributing to open-source backend tooling projects</li>
+                <li>• Publishing technical articles on backend architecture patterns</li>
+              </ul>
             </div>
           </div>
 
-          {/* Profile Photo */}
-          <div className="hidden md:block">
-            <div className="relative w-64 h-64 rounded-lg overflow-hidden border border-gray-200">
-              <Image
-                src="/profile.jpg"
-                alt="Tresor Mugisha"
-                fill
-                className="object-cover"
-                priority
-              />
+          {/* Stats */}
+          <div className="flex gap-8 justify-center mb-12">
+            <div>
+              <div className="text-3xl font-bold text-gray-900">6+</div>
+              <div className="text-xs text-gray-500 uppercase tracking-wider">Projects</div>
             </div>
+            <div>
+              <div className="text-3xl font-bold text-gray-900">3</div>
+              <div className="text-xs text-gray-500 uppercase tracking-wider">Companies</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-gray-900">2+</div>
+              <div className="text-xs text-gray-500 uppercase tracking-wider">Years Exp</div>
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex gap-4 justify-center mb-16">
+            <Link href="/projects" className="px-6 py-3 bg-accent text-white text-sm font-medium rounded hover:bg-accent-dark transition">
+              Explore Projects
+            </Link>
+            <Link href="/resume" className="px-6 py-3 border border-gray-300 text-gray-700 text-sm font-medium rounded hover:border-gray-400 transition">
+              Resume
+            </Link>
+            <Link href="/contact" className="px-6 py-3 border border-gray-300 text-gray-700 text-sm font-medium rounded hover:border-gray-400 transition">
+              Connect
+            </Link>
           </div>
         </div>
       </section>

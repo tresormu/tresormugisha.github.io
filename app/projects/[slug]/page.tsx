@@ -63,7 +63,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
               </div>
             </div>
 
-            {project.links && (
+            {project.links && (project.links.code || project.links.demo) ? (
               <div className="mb-8">
                 <h2 className="text-xl font-bold text-gray-900 mb-4">Links</h2>
                 <div className="flex gap-4">
@@ -107,6 +107,12 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
                       Leaderboard
                     </a>
                   )}
+                </div>
+              </div>
+            ) : project.visibility === 'private' && (
+              <div className="mb-8">
+                <div className="px-4 py-2 bg-gray-100 text-gray-600 text-sm font-medium rounded inline-block">
+                  Private Project
                 </div>
               </div>
             )}

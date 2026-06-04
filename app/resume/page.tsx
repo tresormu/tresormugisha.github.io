@@ -109,9 +109,13 @@ export default function ResumePage() {
         <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">Professional snapshot</p>
         <div className="flex items-center justify-between mb-8">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">Resume</h1>
-          <button className="px-4 py-2 border border-gray-300 text-gray-700 text-sm font-medium rounded hover:border-gray-400 transition">
+          <a 
+            href="/resume.pdf" 
+            download 
+            className="px-4 py-2 border border-gray-300 text-gray-700 text-sm font-medium rounded hover:border-gray-400 transition"
+          >
             Download PDF
-          </button>
+          </a>
         </div>
 
         {/* Summary */}
