@@ -1,0 +1,78 @@
+export const projects = [
+  {
+    slug: 'ikiminapass',
+    name: 'IkiminaPass',
+    role: 'Backend & Project Lead',
+    description: 'Architected a full backend system in NestJS and PostgreSQL to digitise Rwanda\'s community savings groups (Ibimina). Integrating with payment gateway via IntouchPay for automated payment processing and contribution tracking. Built USSD interface for feature phone access, enabling group management without access to our app. Integrated Africa\'s Talking SMS and FCM for dual-channel notifications and real-time alerts.',
+    visibility: 'public',
+    domains: ['Fintech', 'Backend'],
+    tags: ['Payment Integration', 'USSD', 'Notifications'],
+    techStack: ['NestJS', 'PostgreSQL', 'USSD', 'FCM', 'IntouchPay'],
+    image: '/ikimina.png',
+    links: {
+      code: 'https://github.com/tresormu',
+      demo: undefined,
+      report: undefined,
+      leaderboard: undefined,
+    },
+    featured: true,
+  },
+  {
+    slug: 'theyouthcontest',
+    name: 'TheYouthContest',
+    role: 'Full Stack',
+    description: 'Designed and built the full-stack infrastructure digitalizing debate championship processes. Implemented robust Role-Based Access Control (RBAC) to ensure secure, role-specific data access. Built and deployed a clean frontend, optimizing React hooks for efficient data fetching.',
+    visibility: 'public',
+    domains: ['Full Stack', 'Web App'],
+    tags: ['RBAC', 'Debate Platform', 'React'],
+    techStack: ['React', 'Node.js', 'MongoDB', 'RBAC'],
+    image: '/Youthcontest.png',
+    links: {
+      code: 'https://github.com/tresormu',
+      demo: 'https://example.com',
+      report: undefined,
+      leaderboard: undefined,
+    },
+    featured: true,
+  },
+  {
+    slug: 'job-portal',
+    name: 'Job Portal',
+    role: 'Backend & Project Lead',
+    description: 'Led full development lifecycle architecture, task distribution, version control, testing, and deployment. Designed MongoDB schemas and implemented backend APIs for job listings, applications, and user role management. Built authentication and protected route systems with role-based access for employers and applicants.',
+    visibility: 'public',
+    domains: ['Full Stack', 'Recruitment'],
+    tags: ['Job Board', 'Authentication', 'Role Management'],
+    techStack: ['MongoDB', 'Express', 'React', 'RBAC'],
+    image: '/jopPortal.png',
+    links: {
+      code: 'https://github.com/tresormu',
+      demo: 'https://job-portal-front-topaz.vercel.app/',
+      report: undefined,
+      leaderboard: undefined,
+    },
+    featured: true,
+  },
+  {
+    slug: 'bdifferent',
+    name: 'BDifferent',
+    role: 'Full Stack',
+    description: 'Built backend CRUD APIs in Node.js and Express for product, user and category management with image upload support. Architected optimized MongoDB schemas, establishing efficient data relationships to optimize product queries. Integrated frontend and backend services using Axios, ensuring a scalable and decoupled architecture. Implemented schema validation middleware using Zod to ensure type-safe and secure API requests.',
+    visibility: 'public',
+    domains: ['E-commerce', 'Full Stack'],
+    tags: ['E-commerce', 'Image Upload', 'API Design'],
+    techStack: ['Node.js', 'Express', 'MongoDB', 'Cloudinary', 'Zod'],
+    image: '/BDifferent.png',
+    links: {
+      code: 'https://github.com/tresormu',
+      demo: 'https://full-ecommerce-sigma.vercel.app/',
+      report: undefined,
+      leaderboard: undefined,
+    },
+    featured: false,
+  },
+]
+
+export function getProjectBySlug(slug: string) {
+  return projects.find(project => project.slug === slug)
+}
