@@ -10,7 +10,7 @@ export const projects = [
     techStack: ['NestJS', 'TypeScript', 'PostgreSQL', 'Prisma', 'IntouchPay', 'USSD', 'Africa\'s Talking', 'FCM'],
     image: '/ikimina.png',
     links: {
-      code: 'https://github.com/tresormu',
+      code: 'https://github.com/tresormu/ikimina_web',
       demo: 'https://ikimina-web.vercel.app/',
       report: undefined,
       leaderboard: undefined,
@@ -28,7 +28,7 @@ export const projects = [
     techStack: ['Node.js', 'Express', 'REST API', 'FCM', 'PostgreSQL'],
     image: '/mamacare.png',
     links: {
-      code: 'https://github.com/tresormu',
+      code: 'https://github.com/tresormu/Mamacare-bn',
       demo: 'https://hackthon-web-phi.vercel.app/',
       report: undefined,
       leaderboard: undefined,
@@ -46,7 +46,7 @@ export const projects = [
     techStack: ['React', 'Node.js', 'RBAC', 'REST API'],
     image: '/Youthcontest.png',
     links: {
-      code: 'https://github.com/tresormu',
+      code: 'https://github.com/tresormu/youthcont_fn',
       demo: 'https://youthcont-fn.vercel.app/',
       report: undefined,
       leaderboard: undefined,
@@ -64,7 +64,7 @@ export const projects = [
     techStack: ['MongoDB', 'Express', 'JWT', 'RBAC', 'Node.js'],
     image: '/jopPortal.png',
     links: {
-      code: 'https://github.com/tresormu',
+      code: 'https://github.com/tresormu/Job-Portal_Back',
       demo: 'https://job-portal-front-topaz.vercel.app/',
       report: undefined,
       leaderboard: undefined,
