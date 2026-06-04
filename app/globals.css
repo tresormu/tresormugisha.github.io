@@ -1,12 +1,116 @@
 @import "tailwindcss";
 
 @theme {
-  --color-accent: #0d9488;
-  --color-accent-light: #14b8a6;
-  --color-accent-dark: #0f766e;
+  --color-background: #ffffff;
+  --color-foreground: #1f2933;
+  --color-accent: #5f7a61;
+  --color-accent-strong: #4f6551;
+  --color-accent-soft: #eef3ee;
+  --color-accent-border: #c8d3c9;
+}
+
+:root {
+  --background: #fff;
+  --foreground: #1f2933;
+  --accent: #5f7a61;
+  --accent-strong: #4f6551;
+  --accent-soft: #eef3ee;
+  --accent-border: #c8d3c9;
 }
 
 body {
+  background: var(--background);
+  color: var(--foreground);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom CSS classes from target portfolio */
+.paper-panel {
+  background: linear-gradient(#fffffffa, #ffffffed);
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px -24px #5f7a6159;
+}
+
+.note-card {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.85rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.note-card:hover {
+  border-color: var(--accent-border);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -20px #5f7a6173;
+}
+
+.section-label {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.info-chip {
+  border: 1px dashed var(--accent-border);
+  background: var(--accent-soft);
+  border-radius: 0.8rem;
+  flex-direction: column;
+  padding: 0.7rem 0.9rem;
+  display: flex;
+}
+
+.chip-number {
+  color: #111827;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.chip-label {
+  color: #4b5563;
+  font-size: 0.75rem;
+}
+
+.dotted-grid {
+  background-image: radial-gradient(#d8e1d9 0.9px, #0000 0.9px);
+  background-size: 22px 22px;
+}
+
+.mesh-orb {
+  background: radial-gradient(circle at 25% 25%, #c8d3c98c, #0000 60%),
+              radial-gradient(circle at 75% 75%, #5f7a6147, #0000 62%),
+              radial-gradient(circle at 55% 35%, #e5ece680, #0000 58%);
+}
+
+.section-divider {
+  border-top: 1px solid #e6ece7;
+  margin-top: 2.25rem;
+  padding-top: 2.25rem;
+}
+
+@media (min-width: 640px) {
+  .section-divider {
+    margin-top: 2.75rem;
+    padding-top: 2.75rem;
+  }
+}
+
+/* Custom styling for skip links and access accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent);
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
 }

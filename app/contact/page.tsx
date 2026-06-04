@@ -4,142 +4,122 @@ import Footer from '@/components/Footer'
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen flex flex-col bg-white">
       <Nav />
       
-      <section className="pt-32 pb-16 px-6 md:px-12 max-w-6xl mx-auto">
-        <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">Get in touch</p>
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-8">Contact</h1>
-
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Let's Connect</h2>
-            <p className="text-gray-600 mb-8">
-              I'm always interested in opportunities where thoughtful technology can create measurable impact. Feel free to reach out!
-            </p>
-
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-sm font-semibold text-gray-900 mb-1">Email</h3>
-                <a href="mailto:tresormugisha07@gmail.com" className="text-accent hover:underline">
-                  tresormugisha07@gmail.com
-                </a>
-              </div>
-
-              <div>
-                <h3 className="text-sm font-semibold text-gray-900 mb-1">Phone</h3>
-                <p className="text-gray-600">+250 785 220 022</p>
-              </div>
-
-              <div>
-                <h3 className="text-sm font-semibold text-gray-900 mb-1">Location</h3>
-                <p className="text-gray-600">Kigali, Rwanda</p>
-              </div>
-            </div>
-
-            <div className="mt-8">
-              <h3 className="text-sm font-semibold text-gray-900 mb-3">Social Links</h3>
-              <div className="flex gap-4">
-                <a 
-                  href="https://github.com/tresormu" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 border border-gray-300 text-gray-700 text-sm font-medium rounded hover:border-gray-400 transition"
-                >
-                  GitHub
-                </a>
-                <a 
-                  href="https://linkedin.com/in/mugisha-tresor-73a876390" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 border border-gray-300 text-gray-700 text-sm font-medium rounded hover:border-gray-400 transition"
-                >
-                  LinkedIn
-                </a>
-              </div>
+      {/* Page Shell */}
+      <div className="flex-grow relative overflow-hidden">
+        <div className="absolute inset-0 -z-10 dotted-grid opacity-35"></div>
+        
+        <div className="max-w-4xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-6 pb-20">
+          
+          {/* Header Panel */}
+          <div className="paper-panel p-6 sm:p-8 mb-10">
+            <p className="section-label">Get in touch</p>
+            <div className="mb-4 sm:mb-6">
+              <div className="mb-4 h-1 w-12 rounded-full bg-[#5F7A61]" aria-hidden="true"></div>
+              <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Contact Me</h2>
+              <p className="mt-3 text-lg text-gray-600 max-w-2xl leading-relaxed">
+                Feel free to connect through any of the channels below.
+              </p>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-6">Send a Message</h2>
-            <form className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-accent transition"
-                  placeholder="Your name"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-accent transition"
-                  placeholder="your@email.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-accent transition"
-                  placeholder="What's this about?"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-accent transition resize-none"
-                  placeholder="Your message..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full px-6 py-3 bg-accent text-white text-sm font-medium rounded hover:bg-accent-dark transition"
+          {/* Contact Details List */}
+          <div className="space-y-6 section-divider">
+            
+            {/* GitHub Card */}
+            <a
+              href="https://github.com/tresormu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-4 p-4 bg-gray-50 border border-gray-150 rounded-xl hover:bg-gray-100 transition-colors group cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-github w-6 h-6 text-gray-700 flex-shrink-0 mt-0.5"
+                aria-hidden="true"
               >
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+              </svg>
+              <div>
+                <h2 className="font-semibold text-gray-900 group-hover:text-[#4F6551] transition-colors">GitHub</h2>
+                <p className="text-gray-600 text-sm mt-0.5">Check out my open-source work and backend repositories</p>
+              </div>
+            </a>
 
-        {/* Quick Links */}
-        <div className="mt-16 pt-8 border-t border-gray-200">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">Quick Links</h2>
-          <div className="flex gap-4">
-            <Link href="/projects" className="px-6 py-3 border border-gray-300 text-gray-700 text-sm font-medium rounded hover:border-gray-400 transition">
-              View My Projects
-            </Link>
-            <Link href="/resume" className="px-6 py-3 border border-gray-300 text-gray-700 text-sm font-medium rounded hover:border-gray-400 transition">
-              Download Resume
-            </Link>
+            {/* LinkedIn Card */}
+            <a
+              href="https://linkedin.com/in/mugisha-tresor-73a876390"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-4 p-4 bg-gray-50 border border-gray-150 rounded-xl hover:bg-gray-100 transition-colors group cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-linkedin w-6 h-6 text-[#4F6551] flex-shrink-0 mt-0.5"
+                aria-hidden="true"
+              >
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect width="4" height="12" x="2" y="9"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              <div>
+                <h2 className="font-semibold text-gray-900 group-hover:text-[#4F6551] transition-colors">LinkedIn</h2>
+                <p className="text-gray-600 text-sm mt-0.5">Connect professionally and follow my engineering updates</p>
+              </div>
+            </a>
+
+            {/* Response Time Card */}
+            <div className="flex items-start gap-4 p-4 bg-[#EEF3EE] border border-[#C8D3C9] rounded-xl">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-clock w-6 h-6 text-[#4F6551] flex-shrink-0 mt-0.5"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <div>
+                <h2 className="font-semibold text-[#334155]">Response Time &amp; Direct Email</h2>
+                <p className="text-[#475569] text-sm mt-0.5">
+                  I typically respond within 24-48 hours. You can email me directly at{' '}
+                  <a href="mailto:tresormugisha07@gmail.com" className="text-[#4F6551] font-semibold hover:underline">
+                    tresormugisha07@gmail.com
+                  </a>{' '}
+                  or send a message via LinkedIn.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
-      </section>
+      </div>
 
       <Footer />
     </main>
