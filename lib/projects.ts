@@ -10,7 +10,7 @@ export const projects = [
     techStack: ['NestJS', 'TypeScript', 'PostgreSQL', 'Prisma', 'IntouchPay', 'USSD', 'Africa\'s Talking', 'FCM'],
     image: '/ikimina.png',
     links: {
-      code: 'https://github.com/tresormu/ikimina_web',
+      code: 'https://github.com/tresormu/ikimina_bn',
       demo: 'https://ikimina-web.vercel.app/',
       report: undefined,
       leaderboard: undefined,
