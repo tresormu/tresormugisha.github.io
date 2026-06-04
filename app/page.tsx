@@ -14,24 +14,28 @@ export default function HomePage() {
       <Nav />
 
       {/* Main Content Area */}
-      <div className="flex-grow max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-6 pb-20">
-        
-        {/* Hero Section */}
-        <section className="relative overflow-hidden pt-4 pb-14 sm:pb-20" aria-labelledby="hero-heading">
-          <div className="absolute inset-0 -z-10 bg-white/70" aria-hidden="true"></div>
-          <div className="absolute inset-0 -z-10 dotted-grid opacity-50"></div>
-          <div className="absolute right-0 top-0 h-72 w-72 mesh-orb -translate-y-1/3 translate-x-1/3 rounded-full"></div>
+      <div className="flex-grow">
+        <div className="min-h-screen pb-[4.5rem] sm:pb-[5.5rem]">
           
-          <div className="grid gap-8 lg:grid-cols-[1.3fr_0.7fr] items-start">
+          {/* Hero Section */}
+          <section className="relative overflow-hidden pt-0 pb-14 sm:pb-20" aria-labelledby="hero-heading">
+            <div className="absolute inset-0 -z-20 bg-cover bg-center opacity-20" style={{ backgroundImage: "url('/images/hero-background.jpeg')" }} aria-hidden="true"></div>
+            <div className="absolute inset-0 -z-10 bg-white/70" aria-hidden="true"></div>
+            <div className="absolute inset-0 -z-10 dotted-grid opacity-50"></div>
+            <div className="absolute right-0 top-0 h-72 w-72 mesh-orb -translate-y-1/3 translate-x-1/3 rounded-full"></div>
             
-            {/* Left Main Panel */}
-            <div className="paper-panel p-6 sm:p-10">
-              <h1 id="hero-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
-                Tresor Mugisha
-              </h1>
-              <p className="mt-2 text-xl sm:text-2xl font-semibold text-[#4F6551]">
-                Software Engineer | Backend Developer
-              </p>
+            <div className="w-full px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6">
+              <div className="grid gap-8 lg:grid-cols-[1.3fr_0.7fr] items-start">
+                
+                {/* Left Main Panel */}
+                <div className="paper-panel p-6 sm:p-10">
+                  <p className="section-label">Portfolio · Backend Development &amp; Full Stack Engineering</p>
+                  <h1 id="hero-heading" className="mt-4 text-xl sm:text-2xl font-bold text-gray-900 tracking-tight">
+                    Tresor Mugisha
+                  </h1>
+                  <p className="mt-3 text-xl sm:text-2xl font-semibold text-[#4F6551]">
+                    Software Engineer | Backend Developer
+                  </p>
               <p className="mt-6 text-base sm:text-lg text-gray-700 leading-relaxed max-w-3xl">
                 Building reliable systems, writing maintainable code, and creating production-grade SaaS products with focus on backend architecture and full-stack development.
               </p>
@@ -223,11 +227,13 @@ export default function HomePage() {
               </div>
             </aside>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Featured Projects Section */}
         <section className="py-16 sm:py-20 section-divider" aria-labelledby="featured-projects-heading">
-          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
+            <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="section-label">Selected Work</p>
               <h2 id="featured-projects-heading" className="mt-2 text-3xl font-bold text-gray-900">
@@ -379,11 +385,13 @@ export default function HomePage() {
               </article>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Expertise Summary Section */}
         <section className="py-16 sm:py-20 section-divider" aria-labelledby="expertise-heading">
-          <div className="paper-panel p-6 sm:p-8">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
+            <div className="paper-panel p-6 sm:p-8">
             <p className="section-label text-center">Capability Stack</p>
             <h2 id="expertise-heading" className="mt-2 text-3xl font-bold text-gray-900 text-center">
               Areas of Expertise
@@ -415,11 +423,13 @@ export default function HomePage() {
               </article>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Let's Work Together Panel */}
         <section className="py-16 sm:py-20 section-divider" aria-labelledby="cta-heading">
-          <div className="paper-panel p-8 sm:p-10 text-center">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
+            <div className="paper-panel p-8 sm:p-10 text-center">
             <p className="section-label">Open to collaboration</p>
             <h2 id="cta-heading" className="mt-2 text-3xl font-bold text-gray-900">
               Let's Work Together
@@ -456,8 +466,9 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-        </section>
-
+        </div>
+      </section>
+      </div>
       </div>
 
       <Footer />

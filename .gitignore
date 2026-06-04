@@ -42,3 +42,11 @@ next-env.d.ts
 # OS
 Thumbs.db
 desktop.ini
+
+# Scratch / Temp files
+scratch_*
+prettified_*
+downloaded_css.css
+extracted_*
+*.css.css
+

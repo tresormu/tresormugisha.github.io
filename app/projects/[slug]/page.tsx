@@ -27,7 +27,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
       <div className="flex-grow relative overflow-hidden">
         <div className="absolute inset-0 -z-10 dotted-grid opacity-35"></div>
         
-        <div className="max-w-4xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-6 pb-20">
+        <div className="w-full px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-20">
           
           {/* Back Navigation */}
           <nav className="mb-8">
