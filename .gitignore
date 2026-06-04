@@ -8,7 +8,7 @@ node_modules/
 
 # Next.js
 /.next/
-/out/
+# /out/ - Commented out for GitHub Pages static export
 
 # Production
 /build
