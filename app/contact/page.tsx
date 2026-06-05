@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import EmailContactForm from '@/components/EmailContactForm'
 
 export default function ContactPage() {
   return (
@@ -117,6 +117,10 @@ export default function ContactPage() {
               </div>
             </div>
 
+          </div>
+
+          <div className="w-full px-4 sm:px-6 lg:px-8">
+            <EmailContactForm />
           </div>
         </div>
       </div>
